@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ReplacingImageURLProtocol.h"
+#import "ReplaceSchemeHandler.h"
+#import <WebKit/WebKit.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NSURLProtocol registerClass:[ReplacingImageURLProtocol class]];
+    //[NSURLProtocol registerClass:[ReplacingImageURLProtocol class]];
+
     return YES;
 }
 

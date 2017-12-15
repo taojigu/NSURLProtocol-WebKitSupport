@@ -16,9 +16,11 @@ static NSString* const FilteredKey = @"FilteredKey";
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
     NSString* extension = request.URL.pathExtension;
+    NSLog(@"Interept Request： %@", request.URL);
     BOOL isImage = [@[@"png", @"jpeg", @"gif", @"jpg"] indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         return [extension compare:obj options:NSCaseInsensitiveSearch] == NSOrderedSame;
     }] != NSNotFound;
+    
     return [NSURLProtocol propertyForKey:FilteredKey inRequest:request] == nil && isImage;
 }
 
@@ -30,7 +32,18 @@ static NSString* const FilteredKey = @"FilteredKey";
     NSMutableURLRequest* request = self.request.mutableCopy;
     [NSURLProtocol setProperty:@YES forKey:FilteredKey inRequest:request];
     
+    NSURL *targeURL = nil;
+    if ([request.URL.scheme isEqualToString:@"zhhttp"]) {
+        NSURLComponents *components = [NSURLComponents componentsWithURL:request.URL resolvingAgainstBaseURL:YES];
+        components.scheme = @"http";
+        targeURL = components.URL;
+    } else {
+        targeURL = request.URL;
+    }
+   
     NSData* data = UIImagePNGRepresentation([UIImage imageNamed:@"image"]);
+    //如果没有缓存，就start 一个Request，同时设置反重复请求属性 [NSURLProtocol setProperty
+    
     NSURLResponse* response = [[NSURLResponse alloc] initWithURL:self.request.URL MIMEType:@"image/png" expectedContentLength:data.length textEncodingName:nil];
     [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
     [self.client URLProtocol:self didLoadData:data];

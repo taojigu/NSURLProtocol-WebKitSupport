@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1671ACA71FE3917E003E0927 /* ReplaceSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671ACA61FE3917E003E0927 /* ReplaceSchemeHandler.m */; };
+		1671ACA91FE3974A003E0927 /* Test.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1671ACA81FE3974A003E0927 /* Test.htm */; };
 		3802E0851DACE4C9008B9737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E0841DACE4C9008B9737 /* main.m */; };
 		3802E0881DACE4C9008B9737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E0871DACE4C9008B9737 /* AppDelegate.m */; };
 		3802E08B1DACE4C9008B9737 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E08A1DACE4C9008B9737 /* ViewController.m */; };
@@ -20,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1671ACA51FE3917E003E0927 /* ReplaceSchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplaceSchemeHandler.h; sourceTree = "<group>"; };
+		1671ACA61FE3917E003E0927 /* ReplaceSchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplaceSchemeHandler.m; sourceTree = "<group>"; };
+		1671ACA81FE3974A003E0927 /* Test.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Test.htm; sourceTree = "<group>"; };
 		3802E0801DACE4C9008B9737 /* NSURLProtocol+WebKitSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSURLProtocol+WebKitSupport.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3802E0841DACE4C9008B9737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3802E0861DACE4C9008B9737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 		3802E0821DACE4C9008B9737 /* NSURLProtocol+WebKitSupport */ = {
 			isa = PBXGroup;
 			children = (
+				1671ACA81FE3974A003E0927 /* Test.htm */,
 				3802E0861DACE4C9008B9737 /* AppDelegate.h */,
 				3802E0871DACE4C9008B9737 /* AppDelegate.m */,
 				3802E0891DACE4C9008B9737 /* ViewController.h */,
@@ -84,6 +90,8 @@
 				3802E0911DACE4C9008B9737 /* LaunchScreen.storyboard */,
 				3802E0941DACE4C9008B9737 /* Info.plist */,
 				3802E0831DACE4C9008B9737 /* Supporting Files */,
+				1671ACA51FE3917E003E0927 /* ReplaceSchemeHandler.h */,
+				1671ACA61FE3917E003E0927 /* ReplaceSchemeHandler.m */,
 			);
 			path = "NSURLProtocol+WebKitSupport";
 			sourceTree = "<group>";
@@ -136,7 +144,7 @@
 				TargetAttributes = {
 					3802E07F1DACE4C9008B9737 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = TJT2HAB95B;
+						DevelopmentTeam = 8J52SRPW6X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -168,6 +176,7 @@
 				3802E0931DACE4C9008B9737 /* LaunchScreen.storyboard in Resources */,
 				3802E0901DACE4C9008B9737 /* Assets.xcassets in Resources */,
 				3802E08E1DACE4C9008B9737 /* Main.storyboard in Resources */,
+				1671ACA91FE3974A003E0927 /* Test.htm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3802E09C1DACE546008B9737 /* NSURLProtocol+WebKitSupport.m in Sources */,
+				1671ACA71FE3917E003E0927 /* ReplaceSchemeHandler.m in Sources */,
 				3802E0A01DACE5C5008B9737 /* ReplacingImageURLProtocol.m in Sources */,
 				3802E0A51DACEEF8008B9737 /* RootViewController.m in Sources */,
 				3802E08B1DACE4C9008B9737 /* ViewController.m in Sources */,
@@ -303,8 +313,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TJT2HAB95B;
+				DEVELOPMENT_TEAM = 8J52SRPW6X;
 				INFOPLIST_FILE = "NSURLProtocol+WebKitSupport/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yeatse.NSURLProtocol-WebKitSupport";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,8 +326,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TJT2HAB95B;
+				DEVELOPMENT_TEAM = 8J52SRPW6X;
 				INFOPLIST_FILE = "NSURLProtocol+WebKitSupport/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yeatse.NSURLProtocol-WebKitSupport";
 				PRODUCT_NAME = "$(TARGET_NAME)";
